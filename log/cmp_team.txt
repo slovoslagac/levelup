@@ -1,0 +1,2 @@
+30.11.2017 22:26:09 | Kreiranje novog tima : 'username', Petar Prodanovic,'phone', 0653232388,'email', petar.prodanovic@gmail.com
+30.11.2017 22:27:15 | Kreiranje novog tima : 'username', Petar Prodanovic,'phone', 0653232388,'email', petar.prodanovic@gmail.com

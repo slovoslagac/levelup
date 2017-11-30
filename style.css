@@ -1,0 +1,293 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background:url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+a, a label {
+    cursor:pointer;
+}
+
+#wraper {
+    overflow: hidden;
+}
+
+.box {
+    width:944px;
+    background:#000;
+    margin:50px auto 10px auto;
+    box-shadow: 0px 0px 5px #000;
+    padding:4px;
+    overflow: hidden;
+}
+
+.lol {
+    position:relative;
+    float:left;
+    width:470px;
+    height:250px;
+    background:#000;
+    background: url(img/lol.jpg);
+}
+
+.fifa {
+    position:relative;
+    float:left;
+    width:470px;
+    height:250px;
+    margin-left:4px;
+    background:#000;
+    background: url(img/fifa.jpg);
+}
+
+.down {
+    float:left;
+    width:960px;
+    height:250px;
+    margin-top:5px;
+}
+
+.dota {
+    position:relative;
+    float:left;
+    width:233px;
+    height:250px;
+    margin-right:4px;
+    background: url(img/dota.jpg);
+}
+
+.nba {
+    position:relative;
+    float:left;
+    width:233px;
+    height:250px;
+    margin-right:4px;
+    background: url(img/nba.jpg);
+}
+
+.mk {
+    position:relative;
+    float:left;
+    width:233px;
+    height:250px;
+    margin-right:4px;
+    background: url(img/mk.jpg);
+}
+
+.pes {
+    position:relative;
+    float:left;
+    width:233px;
+    height:250px;
+    margin-right:4px;
+    background: url(img/pes.jpg);
+}
+
+.boxa {
+    float:left;
+    width:233px;
+    height:250px;
+    margin-right:4px;
+    background:#000;
+}
+
+.apply {
+    position:absolute;
+    bottom:0px;
+    width:470px;
+    height:30px;
+    background:#febc0c;
+    text-align:center;
+    font-size:16px;
+    line-height:30px;
+    font-weight:bold;
+    color:#441c6c;
+}
+
+.apply_down {
+    position:absolute;
+    bottom:0px;
+    width:233px;
+    height:30px;
+    background:#441c6c;
+    text-align:center;
+    font-size:16px;
+    line-height:30px;
+    font-weight:bold;
+    color:#febc0c;
+}
+
+.box a {
+    text-decoration:none;
+    cursor:pointer;
+}
+
+
+
+.box a:hover {
+    color:#000;
+    cursor:pointer;
+    opacity: 0.8;
+}
+
+.levelup {
+    width:200px;
+    height:200px;
+    background:url(img/levelup.png);
+    margin:0px auto;
+    font-size:12px;
+    color:#fff;
+    text-align:center;
+    line-height: 370px;
+}
+
+/* FIFA */
+
+.title {
+    float:left;
+    height:40px;
+    width:944px;
+    line-height:40px;
+    text-align:center;
+    font-size:24px;
+    color:#febc0c;
+
+}
+
+.cell {
+    float:left;
+    width:458px;
+    height:40px;
+    line-height:40px;
+    background:#111;
+    color:#fff;
+    padding-left:12px;
+    border:1px solid #222;
+    font-weight: 300;
+}
+
+.cell input {
+    width:220px;
+    float:right;
+    margin:6px 10px;
+    height:21px;
+    font-size:14px;
+    font-weight:100;
+}
+
+.cell select {
+    width:225px;
+    float:right;
+    margin:6px 10px;
+    height:25px;
+    font-size:14px;
+    font-weight:100;
+}
+
+.cell_info {
+    float:left;
+    overflow: hidden;
+    width:922px;
+    border:1px solid #222;
+    font-size:13px;
+    background:#111;
+    color:#febc0c;
+    padding:10px;
+    font-weight: 300;
+    text-align:justify;
+}
+
+.cell_prizes {
+    float:left;
+    overflow: hidden;
+    width:450px;
+    height:140px;
+    border:1px solid #222;
+    font-size:13px;
+    background:#111;
+    color:#fff;
+    padding:10px;
+    font-weight: lighter;
+    text-align:justify;
+}
+
+.submit {
+    float:left;
+    width:942px;
+    height:70px;
+}
+
+.button {
+    background-color: #441c6c; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin:10px auto;
+}
+
+b {
+    font-weight:600;
+}
+
+.sponsor {
+    width:944px;
+    margin:0px auto;
+    padding:4px;
+    overflow: hidden;
+}
+
+.sponsors {
+    float:left;
+    width:314px;
+    height:300px;
+}
+
+/* LOL */
+
+.team_name {
+    float:left;
+    height:40px;
+    width:942px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    background:#111;
+    border:1px solid #222;
+
+}
+
+.team_name input {
+    width:300px;
+    margin:6px 10px;
+    height:21px;
+    font-size:14px;
+    font-weight:100;
+}
+
+.position {
+    float:left;
+    height:40px;
+    width:942px;
+    line-height:40px;
+    text-align:center;
+    color:#fff;
+    background:#111;
+    border:1px solid #222;
+}
+
+.player {
+    float:left;
+    height:40px;
+    width:942px;
+    line-height:40px;
+    text-align:center;
+    color:#febc0c;
+    background:#111;
+    border:1px solid #222;
+}
