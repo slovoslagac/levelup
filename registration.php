@@ -2,7 +2,7 @@
 include(join(DIRECTORY_SEPARATOR, array('includes', 'init.php')));
 
 $tmpplayer = new cmp_player();
-
+$newplayer = '';
 
 if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])) {
     $email = $_GET['email'];
@@ -17,8 +17,6 @@ if (isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && 
 if (isset($_POST['saveplayer'])) {
     $pass = $_POST['pass'];
     $repeat = $_POST['repeat'];
-
-    echo "$pass - $repeat";
     if ($pass === $repeat) {
         $crypt_password = crypt($pass);
         $email = $_COOKIE['email'];
@@ -48,7 +46,7 @@ if (isset($_POST['saveplayer'])) {
 <body>
 
 
-<?php if ($newplayer->status != 1) { ?>
+<?php if ($newplayer != '' && $newplayer->status != 1 ) { ?>
     <div id="wraper">
         <div class="box">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">

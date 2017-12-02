@@ -46,15 +46,15 @@ if (isset($_POST['saveplayer'])) {
         $tmptrnmentry->setattribute('playerid', $tmpuser->id);
         $tmptrnmentry->addtournamententry();
 
-        try {
-            sendmail($email, $hash);
-            $tmp_cmp_player->updatestatus(3, $tmpuser->id);
-            echo "<script>alert('Verifikacioni mail je poslat na vašu adresu');</script>";
-        } catch (Exception $e) {
-            logAction("Greska pri slanju maila", "'hash', $hash,'email', $email", 'error_mail.txt');
-            echo "<script>alert('Registracija nije uspela! Molimo vas pokušajte ponovo');</script>";
-        }
-        unset($tmptrnmentry, $tmpuser, $tmp_cmp_player);
+//        try {
+//            sendmail($email, $hash);
+//            $tmp_cmp_player->updatestatus(3, $tmpuser->id);
+//            echo "<script>alert('Verifikacioni mail je poslat na vašu adresu');</script>";
+//        } catch (Exception $e) {
+//            logAction("Greska pri slanju maila", "'hash', $hash,'email', $email", 'error_mail.txt');
+//            echo "<script>alert('Registracija nije uspela! Molimo vas pokušajte ponovo');</script>";
+//        }
+//        unset($tmptrnmentry, $tmpuser, $tmp_cmp_player);
         echo "<meta http-equiv='refresh' content='0'>";
 
     } else {

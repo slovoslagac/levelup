@@ -1,2 +1,6 @@
 30.11.2017 22:26:09 | Kreiranje novog tima : 'username', Petar Prodanovic,'phone', 0653232388,'email', petar.prodanovic@gmail.com
 30.11.2017 22:27:15 | Kreiranje novog tima : 'username', Petar Prodanovic,'phone', 0653232388,'email', petar.prodanovic@gmail.com
+01.12.2017 09:57:54 | Kreiranje novog tima : 'username', Petar Prodanovic,'phone', 0653232388,'email', petar.prodanovic@gmail.com
+02.12.2017 20:09:07 | Kreiranje novog tima : 'username', Luka Sekulic,'phone', 638068358,'email', Luka.sekulic2508@gmail.com
+02.12.2017 20:09:30 | Kreiranje novog tima : 'username', Pavle Zigic,'phone', 645950496,'email', zigic200026@gmail.com
+02.12.2017 20:09:56 | Kreiranje novog tima : 'username', Uros Zivanovic,'phone', 0693902124,'email', uros.zivanovic@hotmail.com
