@@ -20,7 +20,7 @@ str_replace('š','&#353',$allmatches);
 <html>
 	<head>
 		<title>Dimension by HTML5 UP</title>
-<!--        <meta http-equiv="refresh" content="30;lol_bracket_64.php" />-->
+        <meta http-equiv="refresh" content="30" />
         <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />

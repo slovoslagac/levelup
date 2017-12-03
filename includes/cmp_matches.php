@@ -55,15 +55,29 @@ class cmp_matches
 
     function getallmatchesplayer(){
         global $conn_cmp;
-        $sql= $conn_cmp->prepare("select h.name home, v.name visitor, date_format(ts.starttime, '%H:%i') matchtime, ts.postition  as ps, m.id, r.homeval, r.visitorval
+        $sql= $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.matchid id, r.homeval, r.visitorval
 from matches m
 left join players h on m.homeparticipantid = h.id
 left join results r on m.id = r.matchid
-left join players v on m.visitorparticipantid = v.id,
-tmpscheduler ts
+left join players v on m.visitorparticipantid = v.id
 where m.tournamentid = 1
-and m.matchid = ts.id
-order by id
+order by m.matchid
+;");
+        $sql->execute();
+        $result = $sql->fetchAll(PDO::FETCH_OBJ);
+        return $result;
+    }
+
+
+    function getallmatchesteams(){
+        global $conn_cmp;
+        $sql= $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.id, r.homeval, r.visitorval
+from matches m
+left join team h on m.homeparticipantid = h.id
+left join results r on m.id = r.matchid
+left join team v on m.visitorparticipantid = v.id
+where m.tournamentid = 2
+order by m.matchid
 ;");
         $sql->execute();
         $result = $sql->fetchAll(PDO::FETCH_OBJ);
