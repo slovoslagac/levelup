@@ -1,0 +1,96 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#screen {
+    width:1920px;
+    height:1080px;
+    background-image: url(bg.jpg);
+    position:relative;
+}
+
+.number1 {
+    width:310px;
+    height:310px;
+    position:absolute;
+    top:318px;
+    left:106px;
+}
+
+.number2 {
+    width:310px;
+    height:310px;
+    position:absolute;
+    top:318px;
+    left:456px;
+}
+
+.number3 {
+    width:310px;
+    height:310px;
+    position:absolute;
+    top:318px;
+    left:806px;
+}
+
+.number4 {
+    width:310px;
+    height:310px;
+    position:absolute;
+    top:318px;
+    left:1156px;
+}
+
+.number5 {
+    width:310px;
+    height:310px;
+    position:absolute;
+    top:318px;
+    left:1506px;
+}
+
+.numbers {
+    width:310px;
+    height:310px;
+    position:relative;
+}
+
+.hover {
+    width:310px;
+    height:310px;
+    background-image: url(hover.png);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.number {
+    width:310px;
+    font-size:200px;
+    font-weight: bolder;
+    color:#fdbb0b;
+    text-align: center;
+    position:absolute;
+    top:20px;
+    left:0px;
+}
+
+.hours {
+    width:310px;
+    font-size:40px;
+    font-weight: bolder;
+    color:#fff;
+    text-align: center;
+    position:absolute;
+    top:240px;
+    left:0px;
+}
+
+.lucky_won {
+    color: green;
+}
+
+.lucky_not {
+    color: red;
+}

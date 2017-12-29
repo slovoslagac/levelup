@@ -17,6 +17,8 @@ defined('INC_PATH') ? null : define('INC_PATH', SITE_ROOT . DS . 'includes');
 require INC_PATH . DS . 'config.php';
 require INC_PATH . DS . 'db.php';
 require INC_PATH . DS . 'function.php';
+require INC_PATH . DS . 'jackpot.php';
+require INC_PATH . DS . 'luckydraw.php';
 
 
 
