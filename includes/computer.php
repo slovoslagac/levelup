@@ -40,7 +40,7 @@ class computer
     }
 
     public function checkstatus($number){
-        $this->number = $number;
+        self::setNumber($number);
         $currentobject = self::getlive();
         (isset($currentobject))? self::getminutes(): "";
         return $this->status;

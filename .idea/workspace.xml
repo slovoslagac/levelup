@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828183b9-9aa7-4742-a523-9a62eeee237b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lucky.php" afterPath="$PROJECT_DIR$/turniri/lucky.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/luckycalculation.php" afterPath="$PROJECT_DIR$/turniri/luckycalculation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/init.php" afterPath="$PROJECT_DIR$/includes/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/turniri/pubg_jackpot.php" afterPath="$PROJECT_DIR$/turniri/pubg_jackpot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/computer.php" afterPath="$PROJECT_DIR$/includes/computer.php" />
     </list>
     <ignored path="levelup.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,7 @@
       <file leaf-file-name="jackpot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/jackpot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <marker date="1514560813403" expanded="true" signature="366:460" placeholder="select Offer... " />
@@ -43,17 +39,17 @@
       <file leaf-file-name="lucky.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/turniri/lucky.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="luckycalculation.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="luckycalculation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/turniri/luckycalculation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5253257">
+            <state vertical-scroll-proportion="-25.26923">
               <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="false" />
@@ -62,14 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="computer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="computer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/computer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.6309696">
+              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding>
-                <marker date="1514928181829" expanded="true" signature="412:460" placeholder="select * fro... livedetails" />
-                <marker date="1514928181829" expanded="true" signature="710:786" placeholder="select * fro... statisticsmain" />
+                <marker date="1514930147645" expanded="true" signature="412:460" placeholder="select * fro... livedetails" />
+                <marker date="1514930147645" expanded="true" signature="710:786" placeholder="select * fro... statisticsmain" />
               </folding>
             </state>
           </provider>
@@ -78,7 +74,7 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/turniri/assets/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -88,7 +84,7 @@
       <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding />
             </state>
@@ -141,8 +137,8 @@
         <option value="$PROJECT_DIR$/turniri/1.php" />
         <option value="$PROJECT_DIR$/turniri/pubg_jackpot.php" />
         <option value="$PROJECT_DIR$/includes/init.php" />
-        <option value="$PROJECT_DIR$/includes/computer.php" />
         <option value="$PROJECT_DIR$/turniri/luckycalculation.php" />
+        <option value="$PROJECT_DIR$/includes/computer.php" />
       </list>
     </option>
   </component>
@@ -186,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -276,6 +271,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,7 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="148" selection-start-line="57" selection-start-column="148" selection-end-line="57" selection-end-column="148" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -417,7 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -425,7 +419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -433,7 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="135" selection-start-line="57" selection-start-column="135" selection-end-line="57" selection-end-column="135" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -484,7 +476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="10" selection-start-line="127" selection-start-column="4" selection-end-line="131" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -612,7 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13898705">
           <caret line="57" column="148" selection-start-line="57" selection-start-column="148" selection-end-line="57" selection-end-column="148" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5166426">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,20 +688,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5166426">
           <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-          <folding>
-            <marker date="1514564866931" expanded="true" signature="620:752" placeholder="..." />
-            <marker date="1514564866931" expanded="true" signature="761:1351" placeholder="..." />
-            <marker date="1514564866931" expanded="true" signature="768:1351" placeholder="..." />
-            <marker date="1514564866931" expanded="true" signature="1066:1144" placeholder="..." />
-            <marker date="1514564866931" expanded="true" signature="1161:1180" placeholder="..." />
-            <marker date="1514564866931" expanded="true" signature="1161:1241" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/jackpot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <marker date="1514560813403" expanded="true" signature="366:460" placeholder="select Offer... " />
@@ -726,20 +703,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/computer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-          <folding>
-            <marker date="1514928181829" expanded="true" signature="412:460" placeholder="select * fro... livedetails" />
-            <marker date="1514928181829" expanded="true" signature="710:786" placeholder="select * fro... statisticsmain" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,7 +719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/turniri/lucky.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
           <folding />
         </state>
@@ -761,10 +727,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/turniri/luckycalculation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5253257">
+        <state vertical-scroll-proportion="-25.26923">
           <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
           <folding>
             <element signature="e#6#87#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/computer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6309696">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <marker date="1514930147645" expanded="true" signature="412:460" placeholder="select * fro... livedetails" />
+            <marker date="1514930147645" expanded="true" signature="710:786" placeholder="select * fro... statisticsmain" />
           </folding>
         </state>
       </provider>
