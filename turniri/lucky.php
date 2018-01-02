@@ -2,6 +2,8 @@
 <?php
 
 //include_once('luckycalculation.php');
+
+
 ?>
 <html>
 <head>
@@ -10,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--[if lte IE 8]>
     <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="../main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
@@ -92,9 +94,9 @@
     function redirect() {
         var time = new Date();
         if (time > redirecttime) {
-            window.location = "http://www.google.com";
+            window.location = "1.php";
         } else {
-            window.setTimeout(redirect, 1000);
+            window.setTimeout(redirect, 600000);
             console.log(redirecttime, time);
         }
     }

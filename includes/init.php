@@ -19,6 +19,7 @@ require INC_PATH . DS . 'db.php';
 require INC_PATH . DS . 'function.php';
 require INC_PATH . DS . 'jackpot.php';
 require INC_PATH . DS . 'luckydraw.php';
+require INC_PATH . DS . 'computer.php';
 
 
 
