@@ -30,7 +30,8 @@ require INC_PATH . DS . 'cmp_tournament.php';
 require INC_PATH . DS . 'cmp_matches.php';
 
 
-
+//variables
+$sonystart = 30;
 
 
 //Slack

@@ -13,7 +13,7 @@ $listoftmpnum = array();
 $listofnum = array();
 $item_won = array();
 $numcomp = 35;
-$sonystart = 30;
+
 
 
 $tmpdate = new DateTime();
@@ -49,10 +49,6 @@ if (!empty($lastlucky) and $lastlucky->date == date_format($tmpdate, 'Y-m-d') an
 
 
     $i = 0;
-
-
-
-
     while ($i < 5) {
         $tmpnum = mt_rand(1, $numcomp);
         if (in_array($tmpnum, $listoftmpnum)) {
@@ -72,7 +68,7 @@ if (!empty($lastlucky) and $lastlucky->date == date_format($tmpdate, 'Y-m-d') an
             array_push($listofnum, array($listofnames[$item], $class));
 
         } else {
-            $tmpcomputerstatus = $newcomputer->checkstatus($item); ($tmpcomputerstatus == true) ? array_push($item_won, $item) : "";
+//            $tmpcomputerstatus = $newcomputer->checkstatus($item); ($tmpcomputerstatus == true) ? array_push($item_won, $item) : "";
             (in_array($item, $item_won)) ? $class = 1 : $class = 2;
             array_push($listofnum, array($item, $class));
 
