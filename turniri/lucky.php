@@ -30,6 +30,31 @@
     <?php } ?>
 </div>
 <script>
+    var allsounds = [];
+    function getsounds() {
+        $(document).ready(function () {
+            $.getJSON('../includes/soundlist.php', function (sounds) {
+                allsounds = sounds;
+            });
+        });
+    };
+
+    getsounds();
+
+    function playAudio() {
+        var sound = new Audio("../sound/defaultnew.mp3");
+        var currentsound;
+        var numvalue = document.getElementById(numOfCalls).innerText;
+        var soundname = '../sound/' + numvalue + '.mp3';
+        var newsound = new Audio(soundname);
+        if (allsounds.indexOf(numvalue+'.mp3') != -1) {
+            currentsound = newsound;
+        } else {
+            currentsound = sound;
+        }
+        currentsound.play();
+
+    }
 
     var numOfCalls = 1;
     var int;
@@ -50,7 +75,6 @@
                         }
                     });
                     if (numOfCalls > 5) {
-//                        clearTimeout(checktime);
                         window.clearInterval(int);
                     } else {
                         int = self.setInterval("display()", 3000);
@@ -78,16 +102,15 @@
     }
 
     function display() {
-//        console.log(numOfCalls);
+        playAudio();
         document.getElementById(numOfCalls).style.display = "block";
         numOfCalls++;
         if (numOfCalls > 5) {
             window.clearInterval(int);
             var val = realtime.getHours();
-            redirecttime.setHours(val, 15, 0);
+            redirecttime.setHours(val, 10, 0);
             redirect();
         }
-//        console.log(numOfCalls);
     }
 
 
@@ -105,6 +128,7 @@
     checktime();
 
 </script>
+
 </body>
 
 </html>
