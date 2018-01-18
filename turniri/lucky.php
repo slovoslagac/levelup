@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <?php
 
-//include_once('luckycalculation.php');
+//include_once('luckycalculationold.php');
 
 
 ?>

@@ -96,6 +96,7 @@ order by b.tstamp desc limit 1");
             $currentobject = self::getlive();
             (!empty($currentobject)) ? self::getminutes() : self::setStatus(false);
         }
+        $tmplucky = new luckydraw();
 //        ($number < $sonystart && !empty($this->userid) && $this->status == true) ? self::insertOffer() : "" ;
 
         return $this->status;
