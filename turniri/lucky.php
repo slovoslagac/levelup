@@ -63,7 +63,7 @@
 
     function test() {
         $(document).ready(function () {
-            $.getJSON('luckycalculation.php', function (data) {
+            $.getJSON('luckynumbers.php', function (data) {
                 if ($.trim(data)) {
                     $.each(data, function (key, val) {
                         var idnum = key + 1;

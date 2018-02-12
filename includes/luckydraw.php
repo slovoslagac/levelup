@@ -81,7 +81,11 @@ order by ld.id desc limit 1');
         $sql->bindParam(":num", $num);
         $sql->execute();
         $result = $sql->fetch(PDO::FETCH_OBJ);
-        return $result;
+        if($result->status == 0 ) {
+            return 0;
+        } else {
+            return 1;
+        }
 
     }
 
