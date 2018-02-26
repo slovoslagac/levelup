@@ -10,6 +10,7 @@ class computer
 {
     private $number;
     private $status;
+    private $userid;
 
     public function setNumber($number)
     {
@@ -19,6 +20,29 @@ class computer
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
+    }
+
+    public function getSessionId(){
+        global $conn_old;
+        $sql = $conn_old->prepare("select * from financialsessions where UserId = :vl and active = 1");
+        $sql->bindParam(":vl", $this->userid);
+        $sql->execute();
+        $result=$sql->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+
+    public function insertOffer(){
+        global $conn_old;
+        $session = self::getSessionId();
+        $sql = $conn_old->prepare("insert into financialoffers (UserId, OfferID, SessionID, TransactionID,EmployeeId,TotalPrice, StartDateTime,FixedStart, Paid, DateAdded, LastDateUsed, FirstDateUsed) values (:ui, 1,:si, -1, 37, 0, now(), 0, 1, now(), '1900-01-01 00:00:00', '1900-01-01 00:00:00' )");
+        $sql->bindParam(":ui",$this->userid);
+        $sql->bindParam(":si",$session->ID);
+        $sql->execute();
     }
 
     public function getlive()
@@ -38,6 +62,7 @@ class computer
         $sql->bindParam(":nm", $this->number);
         $sql->execute();
         $result = $sql->fetch(PDO::FETCH_OBJ);
+        self::setUserid($result->UserID);
         ($result->TotalMinutes > 59) ? self::setStatus(true) : self::setStatus(false);
     }
 
@@ -71,6 +96,7 @@ order by b.tstamp desc limit 1");
             $currentobject = self::getlive();
             (!empty($currentobject)) ? self::getminutes() : self::setStatus(false);
         }
+
         return $this->status;
     }
 }
