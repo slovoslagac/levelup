@@ -25,9 +25,12 @@ foreach($currentTournamentMatches as $item) {
     $tmppubgmatch->setChildObjectAttribute('killroundthree', $item->val6);
     array_push($allmatches, $tmppubgmatch);
     unset($tmppubgmatch);
+
 }
 
 //print_r($currentTournamentMatches);
 
 
-print_r($allmatches, "cmp");
+usort($allmatches, "cmp");
+
+var_dump($allmatches);

@@ -8,7 +8,7 @@
 
 function cmp($a, $b)
 {
-    return strcmp($a->maxposition, $b->maxposition);
+    return strcmp($a->maxpoints, $b->maxpoints);
 }
 
 
@@ -21,9 +21,27 @@ left join players p2 on m.visitorparticipantid = p2.id
 left join results r1 on m.id = r1.matchid and r1.roundid = 1
 left join results r2 on m.id = r2.matchid and r2.roundid = 2
 left join results r3 on m.id = r3.matchid and r3.roundid = 3
-where tournamentid = :tid');
+where m.tournamentid = :tid');
     $sql->bindParam(":tid", $tid);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_OBJ);
     return $result;
+}
+
+function pubgPoints($val)
+{
+    If ($val == 1) {
+        $points = 25;
+    } elseif ($val == 2) {
+        $points = 18;
+    } elseif ($val == 3) {
+        $points = 12;
+    } elseif ($val <= 10) {
+        $points = 8;
+    } elseif ($val <= 20) {
+        $points = 3;
+    } else {
+        $points = 0;
+    }
+    return $points;
 }

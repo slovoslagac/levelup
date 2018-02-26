@@ -8,13 +8,14 @@
  */
 class Match
 {
-    private $hometeam;
-    private $visitorteam;
-    private $tournametnid;
-    private $hometeamname;
-    private $visitorteamname;
+    public $hometeam;
+    public $visitorteam;
+    public $tournametnid;
+    public $hometeamname;
+    public $visitorteamname;
 
-    public function setObjectAttribute($attr, $value){
+    public function setObjectAttribute($attr, $value)
+    {
         $this->$attr = $value;
     }
 }
@@ -22,37 +23,32 @@ class Match
 
 class pubgMatch extends Match
 {
-    private $positionroundone;
-    private $killroundone;
-    private $positionroundtwo;
-    private $killroundtwo;
-    private $positionroundthree;
-    private $killroundthree;
-    public $maxposition;
+    public $positionroundone;
+    public $killroundone;
+    public $positionroundtwo;
+    public $killroundtwo;
+    public $positionroundthree;
+    public $killroundthree;
+    public $maxpoints = 0;
 
-    function setChildObjectAttribute($attr, $value) {
-            $this->$attr = $value;
-            self::setmaxposition();
+    function setChildObjectAttribute($attr, $value)
+    {
+        $this->$attr = $value;
+        self::setmaxpoints();
     }
 
-    function setmaxposition(){
-        if($this->positionroundone != null and $this->positionroundone > $this->positionroundtwo) {
-            if ($this->positionroundone > $this->positionroundthree) {
-                $this->maxposition =  $this->positionroundone;
-            } else {
-                $this->maxposition =  $this->positionroundtwo;
-            }
-        } else {
-            if($this->positionroundtwo != null and $this->positionroundtwo > $this->positionroundthree){
-                $this->maxposition =  $this->positionroundtwo;
-            } else {
-                $this->maxposition = $this->positionroundthree;
-            }
-        }
 
+    function setmaxpoints()
+    {
+        $points1 = pubgPoints($this->positionroundone) + $this->killroundone * 2 ;
+        $points2 = pubgPoints($this->positionroundtwo) + $this->killroundtwo * 2 ;
+        $points3 = pubgPoints($this->positionroundthree) + $this->killroundthree * 2 ;
+        $tmppoints = max($points1, $points2, $points3);
+        $this->maxpoints = $tmppoints;
     }
 
-    public function returndata(){
-        return (get_object_vars($this));
+    public function returndata()
+    {
+        return get_object_vars($this);
     }
 }
