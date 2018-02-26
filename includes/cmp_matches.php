@@ -10,13 +10,13 @@ class cmp_matches
 {
     public $tournamentid;
     public $matchtime;
-    public $matchid;
-    public $homematchid;
-    public $homematchidtype;
+    public $matchid = 1;
+    public $homematchid = 1;
+    public $homematchidtype = 1;
     public $homeparticipantid;
-    public $visitormatchid;
-    public $visitormatchidtype;
-    public $visitorparticipantid;
+    public $visitormatchid = 1;
+    public $visitormatchidtype = 1;
+    public $visitorparticipantid = 1;
     public $roundid;
 
     function addattribute($atr, $value)
@@ -42,9 +42,10 @@ class cmp_matches
         $sql->execute();
     }
 
-    function getmatch($id, $tounamentid){
+    function getmatch($id, $tounamentid)
+    {
         global $conn_cmp;
-        $sql= $conn_cmp->prepare("select * from matches where matchid = :id and tournamentid = :tdi");
+        $sql = $conn_cmp->prepare("select * from matches where id = :id and tournamentid = :tdi");
         $sql->bindParam(":id", $id);
         $sql->bindParam(":tdi", $tounamentid);
         $sql->execute();
@@ -53,15 +54,16 @@ class cmp_matches
     }
 
 
-    function getallmatchesplayer(){
+    function getallmatchesplayer()
+    {
         global $conn_cmp;
-        $sql= $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.matchid id, r.homeval, r.visitorval
+        $sql = $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.id, r.homeval, r.visitorval
 from matches m
 left join players h on m.homeparticipantid = h.id
 left join results r on m.id = r.matchid
 left join players v on m.visitorparticipantid = v.id
 where m.tournamentid = 1
-order by m.matchid
+order by id
 ;");
         $sql->execute();
         $result = $sql->fetchAll(PDO::FETCH_OBJ);
@@ -69,9 +71,10 @@ order by m.matchid
     }
 
 
-    function getallmatchesteams(){
+    function getallmatchesteams()
+    {
         global $conn_cmp;
-        $sql= $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.id, r.homeval, r.visitorval
+        $sql = $conn_cmp->prepare("select h.name home, v.name visitor,  date_format(m.matchtime,'%H:%i')  as matchtime, m.position  as ps, m.id, r.homeval, r.visitorval
 from matches m
 left join team h on m.homeparticipantid = h.id
 left join results r on m.id = r.matchid
@@ -84,12 +87,48 @@ order by m.matchid
         return $result;
     }
 
-//    function getmatchupdate($id, $rez1, $rez2){
-//        global;
-//    }
+    function gethomematchupdate($matchid, $tournamentid)
+    {
+        global $conn_cmp;
+        $sql = $conn_cmp->prepare('select * from matches where homematchid = :mid and tournamentid = :tid limit 1;');
+        $sql->bindParam(":mid", $matchid);
+        $sql->bindParam(":tid", $tournamentid);
+        $sql->execute();
+        $result = $sql->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
 
+    function getvisitormatchupdate($matchid, $tournamentid)
+    {
+        global $conn_cmp;
+        $sql = $conn_cmp->prepare('select * from matches where visitormatchid = :mid and tournamentid = :tid limit 1;');
+        $sql->bindParam(":mid", $matchid);
+        $sql->bindParam(":tid", $tournamentid);
+        $sql->execute();
+        $result = $sql->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
 
+    function updatehomematch($matchid, $torunamentid, $teamid)
+    {
+        global $conn_cmp;
+        $sql = $conn_cmp->prepare('update matches set homeparticipantid = :pid where matchid = :mid and tournamentid = :tid');
+        $sql->bindParam(':pid', $teamid);
+        $sql->bindParam(':mid', $matchid);
+        $sql->bindParam(':tid', $torunamentid);
+        $sql->execute();
 
+    }
 
+    function updatevisitormatch($matchid, $torunamentid, $teamid)
+    {
+        global $conn_cmp;
+        $sql = $conn_cmp->prepare('update matches set visitorparticipantid = :pid where matchid = :mid and tournamentid = :tid');
+        $sql->bindParam(':pid', $teamid);
+        $sql->bindParam(':mid', $matchid);
+        $sql->bindParam(':tid', $torunamentid);
+        $sql->execute();
+
+    }
 
 }

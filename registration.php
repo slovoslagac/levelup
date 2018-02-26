@@ -69,7 +69,7 @@ if (isset($_POST['saveplayer'])) {
         </div>
         <div class="sponsor">
             <div class="sponsors"><a href="http://www.facebook.com/czvesports"><img src="img/czv.png"></a></div>
-            <div class="sponsors"><a href="index.html"><img src="img/levelup_logo.png"></a></div>
+            <div class="sponsors"><a href="index.php"><img src="img/levelup_logo.png"></a></div>
             <div class="sponsors"><a href="http://www.fudbalica.com"><img src="img/fudbalica.png"></a></div>
         </div>
     </div>
@@ -80,7 +80,7 @@ if (isset($_POST['saveplayer'])) {
         </div>
         <div class="sponsor">
             <div class="sponsors"><a href="http://www.facebook.com/czvesports"><img src="img/czv.png"></a></div>
-            <div class="sponsors"><a href="index.html"><img src="img/levelup_logo.png"></a></div>
+            <div class="sponsors"><a href="index.php"><img src="img/levelup_logo.png"></a></div>
             <div class="sponsors"><a href="http://www.fudbalica.com"><img src="img/fudbalica.png"></a></div>
         </div>
     </div>

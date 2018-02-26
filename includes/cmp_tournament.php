@@ -18,4 +18,13 @@ and t.platform = p.id");
         $result = $sql->fetchAll(PDO::FETCH_OBJ);
         return $result;
     }
+
+    public function getTournamentById($id) {
+        global $conn_cmp;
+        $sql=$conn_cmp->prepare("select t.name tournamentname, date_format(t.tournamenttime, '%d.%c.%Y. %H:%i') as starttime from tournaments t where id = :id");
+        $sql->bindParam(":id", $id);
+        $sql->execute();
+        $result = $sql->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
 }

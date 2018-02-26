@@ -14,6 +14,7 @@ class cmp_player
     private $year;
     private $status = 0;
     private $hash;
+    private $password;
 
 
     public function setattribute($atr, $value){
@@ -29,13 +30,14 @@ class cmp_player
     public function addplayer()
     {
         global $conn_cmp;
-        $sql= $conn_cmp->prepare("insert into players(name, phone, email, passhash, born, status) values (:nm, :ph, :em, :hsh, :bn, :st)");
+        $sql= $conn_cmp->prepare("insert into players(name, phone, email, passhash, password, born, status) values (:nm, :ph, :em, :hsh, :pass, :bn, :st)");
         $sql->bindParam(":nm", $this->username);
         $sql->bindParam(":ph", $this->phone);
         $sql->bindParam(":em", $this->email);
         $sql->bindParam(":bn", $this->year);
         $sql->bindParam(":st", $this->status);
         $sql->bindParam(":hsh", $this->hash);
+        $sql->bindParam(":pass", $this->password);
         $sql->execute();
     }
 

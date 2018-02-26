@@ -44,3 +44,27 @@ http://localhost/levelup/registration.php?email='.$email.'&hash='.$hash.'
 
 
 }
+
+function sendmailSuccess($email,$tournament_name){
+
+    $to      = $email; // Send email to our user
+    $subject = "Prijava na turnir  - $tournament_name"; // Give the email a subject
+    $message = "Uspesno ste se prijavili na turnir - $tournament_name"; // Our message above including the link
+
+    $headers = 'From:noreply@level-up.rs' . "\r\n". "CC : petar.prodanovic@gmail.com"; // Set from headers
+    mail($to, $subject, $message, $headers); // Send our email
+
+
+}
+
+function sendmailUnSuccess($email,$tournament_name, $message_sent){
+
+    $to      = $email; // Send email to our user
+    $subject = "Prijava na turnir  - $tournament_name"; // Give the email a subject
+    $message = $message_sent; // Our message above including the link
+
+    $headers = 'From:noreply@level-up.rs' . "\r\n". "CC : petar.prodanovic@gmail.com"; // Set from headers
+    mail($to, $subject, $message, $headers); // Send our email
+
+
+}
