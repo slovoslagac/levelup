@@ -8,11 +8,13 @@
  */
 class Match
 {
-    public $hometeam;
-    public $visitorteam;
-    public $tournametnid;
+    public $hometeamid;
+    public $visitorteamid;
+    public $tournamentid;
     public $hometeamname;
     public $visitorteamname;
+    public $entrynumber;
+    public $matchid;
 
     public function setObjectAttribute($attr, $value)
     {
@@ -29,7 +31,8 @@ class pubgMatch extends Match
     public $killroundtwo;
     public $positionroundthree;
     public $killroundthree;
-    public $maxpoints = 0;
+    public $maxpoints;
+    public $killnumber;
 
     function setChildObjectAttribute($attr, $value)
     {
@@ -40,11 +43,18 @@ class pubgMatch extends Match
 
     function setmaxpoints()
     {
-        $points1 = pubgPoints($this->positionroundone) + $this->killroundone * 2 ;
-        $points2 = pubgPoints($this->positionroundtwo) + $this->killroundtwo * 2 ;
-        $points3 = pubgPoints($this->positionroundthree) + $this->killroundthree * 2 ;
-        $tmppoints = max($points1, $points2, $points3);
-        $this->maxpoints = $tmppoints;
+        $points1 = (pubgPoints($this->positionroundone) + $this->killroundone * 2)  * 100 + $this->killroundone;
+        $points2 = (pubgPoints($this->positionroundtwo) + $this->killroundtwo * 2)  * 100 + $this->killroundtwo;
+        $points3 = (pubgPoints($this->positionroundthree) + $this->killroundthree * 2)  * 100 + $this->killroundthree ;
+
+        $maxvalue = max($points1, $points2, $points3);
+        $killnumber = fmod($maxvalue, 100);
+        $maxpoints = floor($maxvalue/100);
+        $this->maxpoints = $maxpoints;
+        $this->killnumber = $killnumber;
+
+
+
     }
 
     public function returndata()

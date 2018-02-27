@@ -8,13 +8,21 @@
 
 function cmp($a, $b)
 {
-    return strcmp($a->maxpoints, $b->maxpoints);
+    $al = $a->maxpoints;
+    $bl = $b->maxpoints;
+    if ($al == $bl) {
+        $al = $a->killnumber;
+        $bl = $b->killnumber;
+        return ($al > $bl) ? -1 : +1;
+    }
+    return ($al > $bl) ? -1 : +1;
 }
 
 
-function getTournamentMatches($tid){
+function getTournamentMatches($tid)
+{
     global $conn_cmp;
-    $sql= $conn_cmp->prepare('select m.id as matchid, p1.name as hometeamname, p2.name as visitorteamname, r1.val1 as val1, r1.val2 as val2, r2.val1 as val3, r2.val2 as val4, r3.val1 as val5, r3.val2 as val6
+    $sql = $conn_cmp->prepare('select m.id as matchid, m.entrynumber as entrynumber, p1.name as hometeamname, p1.id as hometeamid, p2.id as visitorteamid, p2.name as visitorteamname, r1.val1 as val1, r1.val2 as val2, r2.val1 as val3, r2.val2 as val4, r3.val1 as val5, r3.val2 as val6
 from matches m
 left join players p1 on m.homeparticipantid = p1.id
 left join players p2 on m.visitorparticipantid = p2.id
@@ -36,12 +44,14 @@ function pubgPoints($val)
         $points = 18;
     } elseif ($val == 3) {
         $points = 12;
-    } elseif ($val <= 10) {
+    } elseif ($val> 3 && $val <= 10) {
         $points = 8;
-    } elseif ($val <= 20) {
+    } elseif ($val> 11 && $val <= 20) {
         $points = 3;
-    } else {
+    } elseif($val >21) {
         $points = 0;
+    } else {
+        $points ='';
     }
     return $points;
 }

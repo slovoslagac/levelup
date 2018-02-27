@@ -11,12 +11,12 @@ class cmp_matches
     public $tournamentid;
     public $matchtime;
     public $matchid = 1;
-    public $homematchid = 1;
-    public $homematchidtype = 1;
+    public $homematchid = null;
+    public $homematchidtype = null;
     public $homeparticipantid;
-    public $visitormatchid = 1;
-    public $visitormatchidtype = 1;
-    public $visitorparticipantid = 1;
+    public $visitormatchid = null;
+    public $visitormatchidtype = null;
+    public $visitorparticipantid = null;
     public $roundid;
 
     function addattribute($atr, $value)
@@ -27,7 +27,7 @@ class cmp_matches
     function addmatch()
     {
         global $conn_cmp;
-        $sql = $conn_cmp->prepare("insert into matches (tournamentid  ,matchtime  ,matchid  ,homematchid  ,homematchidtype  ,homeparticipantid  ,visitormatchid  ,visitormatchidtype  ,visitorparticipantid  ,roundid)
+        $sql = $conn_cmp->prepare("insert into matches (tournamentid  ,matchtime  ,matchid  ,homematchid  ,homematchidtype  ,homeparticipantid  ,visitormatchid  ,visitormatchidtype  ,visitorparticipantid  ,entrynumber)
  VALUES (  :tour, :mtime, :mid, :hmid, :hmidt, :hparid, :vmid, :vmidt, :vparid, :round)");
         $sql->bindParam(':tour', $this->tournamentid);
         $sql->bindParam(':mtime', $this->matchtime);

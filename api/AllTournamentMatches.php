@@ -10,6 +10,8 @@ include(join(DIRECTORY_SEPARATOR, array('..','includes', 'init.php')));
 
 $tournament_id = 1;
 $allmatches = array();
+$returnmatches = array();
+$tmparray = array();
 
 $currentTournamentMatches = getTournamentMatches($tournament_id);
 
@@ -17,6 +19,9 @@ foreach($currentTournamentMatches as $item) {
     $tmppubgmatch = new pubgMatch();
     $tmppubgmatch->setObjectAttribute('hometeamname', $item->hometeamname);
     $tmppubgmatch->setObjectAttribute('visitorteamname', $item->visitorteamname);
+    $tmppubgmatch->setObjectAttribute('hometeamid', $item->hometeamid);
+    $tmppubgmatch->setObjectAttribute('visitorteamid', $item->visitorteamid);
+    $tmppubgmatch->setObjectAttribute('matchid', $item->matchid);
     $tmppubgmatch->setChildObjectAttribute('positionroundone', $item->val1);
     $tmppubgmatch->setChildObjectAttribute('killroundone', $item->val2);
     $tmppubgmatch->setChildObjectAttribute('positionroundtwo', $item->val3);
@@ -33,4 +38,13 @@ foreach($currentTournamentMatches as $item) {
 
 usort($allmatches, "cmp");
 
-var_dump($allmatches);
+foreach($allmatches as $item) {
+    if(in_array($item->hometeamid, $tmparray)) {
+
+    } else {
+        array_push($returnmatches, $item);
+        array_push($tmparray,$item->hometeamid);
+    }
+}
+
+var_dump($returnmatches);

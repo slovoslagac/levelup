@@ -22,7 +22,7 @@ class cmp_tournament_entry
     public function addtournamententry()
     {
         global $conn_cmp;
-        $sql = $conn_cmp->prepare("insert into tournament_entry(playerid, teamid, tournamentid, playerenterynumber) values (:pid, :tid, :trnm, :st)");
+        $sql = $conn_cmp->prepare("insert into tournament_entry(playerid, teamid, tournamentid, entrynumber, status) values (:pid, :tid, :trnm, :st, 0)");
         $sql->bindParam(":pid", $this->playerid);
         $sql->bindParam(":tid", $this->teamid);
         $sql->bindParam(":trnm", $this->tournamentid);
@@ -41,7 +41,7 @@ group by tournamentid, playerid");
         $sql->bindParam(":pid", $this->playerid);
         $sql->execute();
         $result = $sql->fetch(PDO::FETCH_OBJ);
-        ($result->value >0)? $this->numberplayerentery = $result->value : $this->numberplayerentery = 0;
+        ($result != '')? $this->numberplayerentery = $result->value : $this->numberplayerentery = 0;
     }
 
     public function getplayerstatus(){
