@@ -48,7 +48,7 @@ function pubgPoints($val)
         $points = 8;
     } elseif ($val> 11 && $val <= 20) {
         $points = 3;
-    } elseif($val >21) {
+    } elseif($val > 21 && $val <= 100) {
         $points = 0;
     } else {
         $points ='';

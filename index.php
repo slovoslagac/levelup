@@ -41,7 +41,7 @@ if (isset($_POST['saveplayer'])) {
         $tmp_tour_entry->setattribute('playerid', $current_player->id);
         $tmp_tour_entry->setattribute('tournamentid', $tournament_id);
         $tmp_player_number = $tmp_tour_entry->getplayerstatus();
-        if ( $tmp_player_number < 3 ) {
+        if ( $tmp_player_number == '' ) {
             $new_player_number = $tmp_player_number +1;
             $tmp_tour_entry->setattribute('numberplayerentery', $new_player_number);
             $tmp_tour_entry->addtournamententry();

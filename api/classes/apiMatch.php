@@ -22,7 +22,6 @@ class Match
     }
 }
 
-
 class pubgMatch extends Match
 {
     public $positionroundone;
@@ -40,21 +39,17 @@ class pubgMatch extends Match
         self::setmaxpoints();
     }
 
-
     function setmaxpoints()
     {
-        $points1 = (pubgPoints($this->positionroundone) + $this->killroundone * 2)  * 100 + $this->killroundone;
-        $points2 = (pubgPoints($this->positionroundtwo) + $this->killroundtwo * 2)  * 100 + $this->killroundtwo;
-        $points3 = (pubgPoints($this->positionroundthree) + $this->killroundthree * 2)  * 100 + $this->killroundthree ;
-
+        $points1 = (pubgPoints($this->positionroundone) + $this->killroundone * 2) * 100 + $this->killroundone;
+        $points2 = (pubgPoints($this->positionroundtwo) + $this->killroundtwo * 2) * 100 + $this->killroundtwo;
+        $points3 = (pubgPoints($this->positionroundthree) + $this->killroundthree * 2) * 100 + $this->killroundthree;
         $maxvalue = max($points1, $points2, $points3);
         $killnumber = fmod($maxvalue, 100);
-        $maxpoints = floor($maxvalue/100);
+        $maxpoints = floor($maxvalue / 100);
+        ($maxpoints == 0) ? $maxpoints = $killnumber : '';
         $this->maxpoints = $maxpoints;
         $this->killnumber = $killnumber;
-
-
-
     }
 
     public function returndata()
