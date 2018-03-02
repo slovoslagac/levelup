@@ -14,6 +14,8 @@ defined('API_PATH') ? null : define('API_PATH', SITE_ROOT . DS . 'api');
 
 require INC_PATH . DS . 'config.php';
 require INC_PATH . DS . 'db.php';
+require INC_PATH . DS . 'function.php';
+
 
 
 //API classes
@@ -22,6 +24,7 @@ require API_PATH . DS . 'apiFunctions.php';
 require API_PATH . DS . 'classes' . DS . 'apiMatch.php';
 require API_PATH . DS . 'classes' . DS . 'apiResults.php';
 require API_PATH . DS . 'classes' . DS . 'apiTournament.php';
+require API_PATH . DS . 'classes' . DS . 'apiPlayer.php';
 
 
 

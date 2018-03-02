@@ -13,6 +13,7 @@ if(isset($_GET['matchid']) && isset($_GET['roundid']) && isset($_GET['position']
     $roundid = $_GET['roundid'];
     $position = $_GET['position'];
     $killnumber= $_GET['killnumber'];
+    (isset($_GET['worker']))? $wokerid=$_GET['worker']: $wokerid = 0;
     $tmpresult = new apiResults($matchid,$position,$killnumber,$roundid);
-    $tmpresult->addResult();
+            $tmpresult->addResult($wokerid);
 }
