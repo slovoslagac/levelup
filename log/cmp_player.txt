@@ -7,3 +7,4 @@
 02.03.2018 15:30:54 | Upis novog igraca : Igrac vec postoji  || Petar Prodanovic, patak.daca@gmail.com
 02.03.2018 15:30:55 | Upis novog igraca : Igrac vec postoji  || Petar Prodanovic, patak.daca@gmail.com
 02.03.2018 15:31:29 | upis novog igraca : Uspesno je upisan novi igrac Petar Prodanovic, pera.detlic@gmail.com
+09.03.2018 13:42:13 | Upis novog igraca : Igrac vec postoji  || Petar Prodanovic, pera.detlic@gmail.com
